@@ -2,8 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+    --sidebar-width: 288px
+}
+
 @layer base{
     html{
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+}
+
+@layer utilities{
+    .sidebar-collapse{
+        width: 72px;
+    }
+    .sidebar-collapse .sidebar-logo{
+        visibility: hidden;
+    }
+    .sidebar-collapse .sidebar-hidden{
+        display: none;
     }
 }
