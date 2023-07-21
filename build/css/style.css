@@ -900,12 +900,12 @@ html{
   width: 1.5rem;
 }
 
-.w-\[128px\] {
-  width: 128px;
+.w-\[--sidebar-width\] {
+  width: var(--sidebar-width);
 }
 
-.w-\[288px\] {
-  width: 288px;
+.w-\[128px\] {
+  width: 128px;
 }
 
 .w-\[40\%\] {
@@ -2154,6 +2154,10 @@ html{
           padding-inline-end: 0.25rem;
 }
 
+.pl-\[--sidebar-collapse-width\] {
+  padding-left: var(--sidebar-collapse-width);
+}
+
 .pl-\[--sidebar-width\] {
   padding-left: var(--sidebar-width);
 }
@@ -2661,15 +2665,31 @@ html{
 }
 
 .sidebar-collapse{
-  width: 72px;
+  width: var(--sidebar-collapse-width);
 }
 
-.sidebar-collapse .sidebar-logo{
+.sidebar-collapse #sidebar-collapse-button{
+  transform: rotate(180deg);
+}
+
+.sidebar-collapse .collapse-hidden{
+  display: none;
+}
+
+.sidebar-collapse .visibility-hidden{
   visibility: hidden;
 }
 
-.sidebar-collapse .sidebar-hidden{
-  display: none;
+.sidebar-collapse .sidebar-links{
+  padding: 0px;
+}
+
+.sidebar-collapse .sidebar-link{
+  border-radius: 0px;
+}
+
+.sidebar-collapse .sidebar-icon{
+  margin-right: 0px;
 }
 
 .\[a-zA-Z-\:\#\] {
@@ -2677,8 +2697,8 @@ html{
 }
 
 :root{
-  --sidebar-width: 288px
-
+  --sidebar-width: 288px;
+  --sidebar-collapse-width: 72px;
 }
 
 .hover\:bg-blue-600:hover {
