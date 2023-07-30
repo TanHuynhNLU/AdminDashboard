@@ -5,6 +5,7 @@
 :root{
     --sidebar-width: 288px;
     --sidebar-collapse-width: 72px;
+    --bg-blue-700-opacity-20: rgba(29,78,216,0.2)
 }
 
 @layer base{
