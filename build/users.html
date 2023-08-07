@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Admin Dashboard</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>users</title>
     <script src="./js/theme.js" defer></script>
     <script src="./js/main.js" defer></script>
 
@@ -510,14 +509,12 @@
                                 <li class="block w-full">
                                     <a
                                         class="px-4 py-1 hover:bg-slate-200 cursor-pointer dark:hover:bg-slate-800 flex flex-row items-center">
-
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                             stroke-width="1.5" stroke="currentColor"
                                             class="w-6 h-6 inline-block mr-2 text-slate-500">
                                             <path stroke-linecap="round" stroke-linejoin="round"
                                                 d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
                                         </svg>
-
                                         <span>Logout</span>
                                     </a>
                                 </li>
@@ -534,318 +531,479 @@
         <!--Begin Content-->
         <div class="px-4 dark:text-gray-400">
             <div class="px-3">
-                <h2 class="text-3xl font-bold">Dashboard</h2>
+                <h2 class="text-3xl font-bold">Users</h2>
                 <ul>
-                    <li class="inline-block"><a href="#">Home</a></li>
+                    <li class="inline-block"><a href="./index.html">Home</a></li>
                     <li class="inline-block pl-2"><a
                             class="text-slate-400 dark:text-gray-500 before:content-['/'] before:pr-2"
-                            href="#">Dashboard</a></li>
+                            href="#">Users</a></li>
                 </ul>
             </div>
-            <div class="flex flex-col xl:flex-row mt-6">
-                <div class="w-full xl:w-4/12 flex flex-col">
-                    <div class="px-3 mb-6">
-                        <div
-                            class="bg-white rounded-xl shadow-sm border border-solid dark:border-gray-600 dark:bg-slate-900">
-                            <div class="p-6">
-                                <div class="flex flex-row">
-                                    <div class="w-1/2">
-                                        <h3 class="text-2xl mb-2 font-bold">Sale</h3>
-                                        <p class="text-gray-400">January - June 2023</p>
-                                    </div>
-                                    <div class="w-1/2 text-right text-2xl text-blue-700">$123.000</div>
-                                </div>
-                            </div>
-                            <div class="mt-4 h-[150px]">
-                                <canvas id="sale-chart">
-                                </canvas>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex flex-col lg:flex-row">
-                        <div class="px-3 mb-6 w-full lg:w-1/2">
-                            <div
-                                class="bg-white rounded-xl shadow-sm border border-solid dark:border-gray-600 dark:bg-slate-900 p-4">
-                                <div class="flex flex-row justify-between">
-                                    <h4 class="text-gray-400">Customers</h4>
-                                    <div class="p-2 bg-[--bg-blue-700-opacity-20]">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-700">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="text-xl font-bold mb-4">12.345</div>
-                                <div class="text-red-600">(-8.9% <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                        class="w-4 h-4 inline-block relative -translate-y-[2px]">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M15.75 17.25L12 21m0 0l-3.75-3.75M12 21V3" />
-                                    </svg>
-                                    )</div>
-                            </div>
-                        </div>
-                        <div class="px-3 mb-6 w-full lg:w-1/2">
-                            <div
-                                class="bg-white rounded-xl shadow-sm border border-solid dark:border-gray-600 dark:bg-slate-900 p-4">
-                                <div class="flex flex-row justify-between">
-                                    <h4 class="text-gray-400">Orders</h4>
-                                    <div class="p-2 bg-[--bg-blue-700-opacity-20]">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-700">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="text-xl font-bold mb-4">345</div>
-                                <div class="text-green-600">(+11.2% <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                        class="w-4 h-4 inline-block relative -translate-y-[2px]">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M8.25 6.75L12 3m0 0l3.75 3.75M12 3v18" />
-                                    </svg>
-                                    )</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full xl:w-8/12">
-                    <div class="px-3 mb-6">
-                        <div
-                            class="bg-white rounded-xl shadow-sm border border-solid dark:border-gray-600 dark:bg-slate-900">
-                            <div class="p-6">
-                                <h3 class="text-2xl mb-2 font-bold">Traffic</h3>
-                                <p class="text-gray-400">January 1,2022 - December 31,2023</p>
-                            </div>
-                            <div class="mt-4 h-[315px]">
-                                <canvas id="traffic-chart" width="1200" height="500">
-                                </canvas>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="px-3 mb-6">
+            <div class="px-3 my-6">
                 <div class="bg-white rounded-xl shadow-sm border border-solid dark:border-gray-600 dark:bg-slate-900">
                     <div class="p-3">
-                        <div class="px-3 pt-3">
-                            <h3 class="text-2xl mb-2 font-bold">Traffic</h3>
-                            <p class="text-gray-400">Last week</p>
-                            <hr class="w-full my-6 border border-solid dark:border-gray-600" />
-                        </div>
-                        <div class="flex flex-row">
-                            <div class="w-1/2 px-3">
-                                <div class="flex flex-row">
-                                    <div class="px-4 border-l-4 border-solid border-blue-600 w-1/2">
-                                        <h5 class="text-sm text-gray-500">New Clients</h5>
-                                        <p class="font-bold">1.234</p>
-                                    </div>
-                                    <div class="px-4 border-l-4 border-solid border-red-600 w-1/2">
-                                        <h5 class="text-sm text-gray-500">Recuring Clients</h5>
-                                        <p class="font-bold">1.500</p>
-                                    </div>
-                                </div>
-                                <hr class="w-full my-6 border border-solid dark:border-gray-600" />
-                                <div class="flex flex-row items-center my-6">
-                                    <div class="w-[100px] text-gray-400">
-                                        <p class="text-sm">Monday</p>
-                                    </div>
-                                    <div class="w-full">
-                                        <div
-                                            class="bg-slate-200 dark:bg-slate-700 h-1 rounded-md overflow-hidden mb-[2px]">
-                                            <div class="w-[30%] h-full bg-gradient-to-r from-blue-300 to-blue-600">
-                                            </div>
-                                        </div>
-                                        <div class="bg-slate-200 dark:bg-slate-700 h-1 rounded-md overflow-hidden">
-                                            <div class="w-[85%] h-full bg-gradient-to-r from-red-300 to-red-600"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex flex-row items-center my-6">
-                                    <div class="w-[100px] text-gray-400">
-                                        <p class="text-sm">Tuesday</p>
-                                    </div>
-                                    <div class="w-full">
-                                        <div
-                                            class="bg-slate-200 dark:bg-slate-700 h-1 rounded-md overflow-hidden mb-[2px]">
-                                            <div class="w-[20%] h-full bg-gradient-to-r from-blue-300 to-blue-600">
-                                            </div>
-                                        </div>
-                                        <div class="bg-slate-200 dark:bg-slate-700 h-1 rounded-md overflow-hidden">
-                                            <div class="w-[70%] h-full bg-gradient-to-r from-red-300 to-red-600"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex flex-row items-center my-6">
-                                    <div class="w-[100px] text-gray-400">
-                                        <p class="text-sm">Wednesday</p>
-                                    </div>
-                                    <div class="w-full">
-                                        <div
-                                            class="bg-slate-200 dark:bg-slate-700 h-1 rounded-md overflow-hidden mb-[2px]">
-                                            <div class="w-[50%] h-full bg-gradient-to-r from-blue-300 to-blue-600">
-                                            </div>
-                                        </div>
-                                        <div class="bg-slate-200 dark:bg-slate-700 h-1 rounded-md overflow-hidden">
-                                            <div class="w-[95%] h-full bg-gradient-to-r from-red-300 to-red-600"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex flex-row items-center my-6">
-                                    <div class="w-[100px] text-gray-400">
-                                        <p class="text-sm">Thursday</p>
-                                    </div>
-                                    <div class="w-full">
-                                        <div
-                                            class="bg-slate-200 dark:bg-slate-700 h-1 rounded-md overflow-hidden mb-[2px]">
-                                            <div class="w-[30%] h-full bg-gradient-to-r from-blue-300 to-blue-600">
-                                            </div>
-                                        </div>
-                                        <div class="bg-slate-200 dark:bg-slate-700 h-1 rounded-md overflow-hidden">
-                                            <div class="w-[85%] h-full bg-gradient-to-r from-red-300 to-red-600"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex flex-row items-center my-6">
-                                    <div class="w-[100px] text-gray-400">
-                                        <p class="text-sm">Friday</p>
-                                    </div>
-                                    <div class="w-full">
-                                        <div
-                                            class="bg-slate-200 dark:bg-slate-700 h-1 rounded-md overflow-hidden mb-[2px]">
-                                            <div class="w-[20%] h-full bg-gradient-to-r from-blue-300 to-blue-600">
-                                            </div>
-                                        </div>
-                                        <div class="bg-slate-200 dark:bg-slate-700 h-1 rounded-md overflow-hidden">
-                                            <div class="w-[70%] h-full bg-gradient-to-r from-red-300 to-red-600"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex flex-row items-center my-6">
-                                    <div class="w-[100px] text-gray-400">
-                                        <p class="text-sm">Saturday</p>
-                                    </div>
-                                    <div class="w-full">
-                                        <div
-                                            class="bg-slate-200 dark:bg-slate-700 h-1 rounded-md overflow-hidden mb-[2px]">
-                                            <div class="w-[50%] h-full bg-gradient-to-r from-blue-300 to-blue-600">
-                                            </div>
-                                        </div>
-                                        <div class="bg-slate-200 dark:bg-slate-700 h-1 rounded-md overflow-hidden">
-                                            <div class="w-[95%] h-full bg-gradient-to-r from-red-300 to-red-600"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex flex-row items-center my-6">
-                                    <div class="w-[100px] text-gray-400">
-                                        <p class="text-sm">Sunday</p>
-                                    </div>
-                                    <div class="w-full">
-                                        <div
-                                            class="bg-slate-200 dark:bg-slate-700 h-1 rounded-md overflow-hidden mb-[2px]">
-                                            <div class="w-[70%] h-full bg-gradient-to-r from-blue-300 to-blue-600">
-                                            </div>
-                                        </div>
-                                        <div class="bg-slate-200 dark:bg-slate-700 h-1 rounded-md overflow-hidden">
-                                            <div class="w-[75%] h-full bg-gradient-to-r from-red-300 to-red-600"></div>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="px-3 pt-3 flex flex-row justify-between">
+                            <div>
+                                <h3 class="text-2xl mb-2 font-bold">Users</h3>
+                                <p class="text-gray-400">1.234 registered users</p>
                             </div>
-                            <div class="w-1/2 px-3">
-                                <div class="flex flex-row">
-                                    <div class="px-4 border-l-4 border-solid border-yellow-600 w-1/2">
-                                        <h5 class="text-sm text-gray-500">Pageviews</h5>
-                                        <p class="font-bold">1.234</p>
-                                    </div>
-                                    <div class="px-4 border-l-4 border-solid border-green-600 w-1/2">
-                                        <h5 class="text-sm text-gray-500">Organic</h5>
-                                        <p class="font-bold">1.500</p>
-                                    </div>
-                                </div>
-                                <hr class="w-full my-6 border border-solid dark:border-gray-600" />
-                                <div class="my-6">
-                                    <div class="flex flex-row justify-between items-center">
-                                        <div class="flex flex-row items-center">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                                                <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
-                                              </svg>
-                                            <span class="inline-block ml-2">Male</span>
-                                        </div>
-                                        <div>45%</div>
-                                    </div>
-                                    <div class="bg-slate-200 dark:bg-slate-700 h-1 rounded-md overflow-hidden mt-1">
-                                        <div class="w-[45%] h-full bg-gradient-to-r from-yellow-300 to-yellow-600">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mb-12">
-                                    <div class="flex flex-row justify-between items-center">
-                                        <div class="flex flex-row items-center">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 320 512" fill="currentColor"><path d="M160 0a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM88 384H70.2c-10.9 0-18.6-10.7-15.2-21.1L93.3 248.1 59.4 304.5c-9.1 15.1-28.8 20-43.9 10.9s-20-28.8-10.9-43.9l53.6-89.2c20.3-33.7 56.7-54.3 96-54.3h11.6c39.3 0 75.7 20.6 96 54.3l53.6 89.2c9.1 15.1 4.2 34.8-10.9 43.9s-34.8 4.2-43.9-10.9l-33.9-56.3L265 362.9c3.5 10.4-4.3 21.1-15.2 21.1H232v96c0 17.7-14.3 32-32 32s-32-14.3-32-32V384H152v96c0 17.7-14.3 32-32 32s-32-14.3-32-32V384z"/></svg>
-                                            <span class="inline-block ml-2">Female</span>
-                                        </div>
-                                        <div>60%</div>
-                                    </div>
-                                    <div class="bg-slate-200 dark:bg-slate-700 h-1 rounded-md overflow-hidden mt-1">
-                                        <div class="w-[60%] h-full bg-gradient-to-r from-yellow-300 to-yellow-600">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mb-4">
-                                    <div class="flex flex-row justify-between items-center">
-                                        <div class="flex flex-row items-center">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 488 512" fill="currentColor"><path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/></svg>
-                                            <span class="inline-block ml-2">Organic search</span>
-                                        </div>
-                                        <div>1256 <span class="text-gray-400">(57%)</span></div>
-                                    </div>
-                                    <div class="bg-slate-200 dark:bg-slate-700 h-1 rounded-md overflow-hidden mt-1">
-                                        <div class="w-[57%] h-full bg-gradient-to-r from-green-300 to-green-600">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mb-4">
-                                    <div class="flex flex-row justify-between items-center">
-                                        <div class="flex flex-row items-center">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 320 512" fill="currentColor"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
-                                            <span class="inline-block ml-2">Facebook</span>
-                                        </div>
-                                        <div>634 <span class="text-gray-400">(30%)</span></div>
-                                    </div>
-                                    <div class="bg-slate-200 dark:bg-slate-700 h-1 rounded-md overflow-hidden mt-1">
-                                        <div class="w-[30%] h-full bg-gradient-to-r from-green-300 to-green-600">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mb-4">
-                                    <div class="flex flex-row justify-between items-center">
-                                        <div class="flex flex-row items-center">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 512 512" fill="currentColor"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
-                                            <span class="inline-block ml-2">Twitter</span>
-                                        </div>
-                                        <div>456 <span class="text-gray-400">(23%)</span></div>
-                                    </div>
-                                    <div class="bg-slate-200 dark:bg-slate-700 h-1 rounded-md overflow-hidden mt-1">
-                                        <div class="w-[23%] h-full bg-gradient-to-r from-green-300 to-green-600">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mb-4">
-                                    <div class="flex flex-row justify-between items-center">
-                                        <div class="flex flex-row items-center">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 448 512" fill="currentColor"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
-                                            <span class="inline-block ml-2">LinkedIn</span>
-                                        </div>
-                                        <div>256 <span class="text-gray-400">(15%)</span></div>
-                                    </div>
-                                    <div class="bg-slate-200 dark:bg-slate-700 h-1 rounded-md overflow-hidden mt-1">
-                                        <div class="w-[15%] h-full bg-gradient-to-r from-green-300 to-green-600">
-                                        </div>
-                                    </div>
-                                </div>
+                            <div>
+                                <a href="./add-user.html"
+                                    class="px-2 py-1 text-blue-700 border border-solid border-blue-700 hover:bg-blue-700 hover:text-white rounded-md flex flex-row items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="w-4 h-4 inline-block">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M19 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 0110.374 21c-2.331 0-4.512-.645-6.374-1.766z" />
+                                    </svg>
+                                    <span class="ml-1 inline-block">Add new user</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex flex-col xl:flex-row px-3 mt-4 justify-between xl:items-center">
+                            <div
+                                class="flex flex-row p-2 w-[350px] border border-solid border-gray-300 dark:border-gray-600 rounded-md items-center bg-gray-100 dark:bg-slate-800 focus-within:border-blue-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                                </svg>
+                                <input type="text" placeholder="Search"
+                                    class="w-full h-full ml-2 bg-gray-100 dark:bg-slate-800 outline-none">
+                            </div>
+                            <div class="flex flex-row mt-4 xl:mt-0">
+                                <label for="filter" class="inline-block">Sort by: </label>
+                                <select name="filter" id="filter" class="border border-solid border-gray-300 dark:border-gray-600 dark:bg-slate-800">
+                                    <option selected class="p-1">None</option>
+                                    <option value="name">Name</option>
+                                    <option value="dateRegistered">Date registered</option>
+                                </select>
+                                <select name="orderBy" id="orderBy" class="border border-solid border-gray-300 dark:border-gray-600 dark:bg-slate-800">
+                                    <option selected class="p-1">A-Z</option>
+                                    <option value="name">Z-A</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="overflow-x-auto px-3">
+                            <table class="table-fixed w-full text-left mt-4 border border-solid border-gray-300 dark:border-gray-600">
+                                <thead>
+                                    <tr class="bg-gray-100 dark:bg-slate-800">
+                                        <th class="p-3 w-8">ID</th>
+                                        <th class="p-3 w-[300px]">Name</th>
+                                        <th class="p-3 w-[200px]">Date registered</th>
+                                        <th class="p-3 w-[200px]">Role</th>
+                                        <th class="p-3 w-[200px]">Status</th>
+                                        <th class="p-3 w-[200px]">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="hover:bg-gray-100 dark:hover:bg-slate-800">
+                                        <td class="p-3">1</td>
+                                        <td class="p-3 flex flex-row items-center">
+                                            <img src="./img/avatar.jpg" alt="avatar" class="rounded-full w-10 h-10">
+                                            <div class="ml-3">
+                                                <p>Tan Huynh</p>
+                                                <p class="text-slate-400">tanhuynh@gmail.com</p>
+                                            </div>
+                                        </td>
+                                        <td class="p-3">1/8/2023</td>
+                                        <td class="p-3">Admin</td>
+                                        <td class="p-3">
+                                            <span
+                                                class="bg-gradient-to-tr from-green-400 to-green-500 inline-block px-2 text-white rounded-xl">Active</span>
+                                        </td>
+                                        <td class="p-3">
+                                            <div class="flex flex-row items-center">
+
+                                                <a href="./edit-user.html"
+                                                    class="p-2 rounded-md bg-green-500 inline-block hover:opacity-80">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="w-4 h-4 text-slate-600">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
+                                                    </svg>
+                                                </a>
+                                                <a id="deleteUser" href="#"
+                                                    class="p-2 rounded-md bg-red-500 inline-block hover:opacity-80 ml-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="w-4 h-4 text-slate-600">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-100 dark:hover:bg-slate-800">
+                                        <td class="p-3">2</td>
+                                        <td class="p-3 flex flex-row items-center">
+                                            <img src="./img/avatar.jpg" alt="avatar" class="rounded-full w-10 h-10">
+                                            <div class="ml-3">
+                                                <p>Tan Huynh</p>
+                                                <p class="text-slate-400">tanhuynh@gmail.com</p>
+                                            </div>
+                                        </td>
+                                        <td class="p-3">1/8/2023</td>
+                                        <td class="p-3">Admin</td>
+                                        <td class="p-3">
+                                            <span
+                                                class="bg-gradient-to-tr from-red-400 to-red-500 inline-block px-2 text-white rounded-xl">Blocked</span>
+                                        </td>
+                                        <td class="p-3">
+                                            <div class="flex flex-row items-center">
+
+                                                <a href="./edit-user.html"
+                                                    class="p-2 rounded-md bg-green-500 inline-block hover:opacity-80">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="w-4 h-4 text-slate-600">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
+                                                    </svg>
+                                                </a>
+                                                <a id="deleteUser" href="#"
+                                                    class="p-2 rounded-md bg-red-500 inline-block hover:opacity-80 ml-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="w-4 h-4 text-slate-600">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-100 dark:hover:bg-slate-800">
+                                        <td class="p-3">3</td>
+                                        <td class="p-3 flex flex-row items-center">
+                                            <img src="./img/avatar.jpg" alt="avatar" class="rounded-full w-10 h-10">
+                                            <div class="ml-3">
+                                                <p>Tan Huynh</p>
+                                                <p class="text-slate-400">tanhuynh@gmail.com</p>
+                                            </div>
+                                        </td>
+                                        <td class="p-3">1/8/2023</td>
+                                        <td class="p-3">Admin</td>
+                                        <td class="p-3">
+                                            <span
+                                                class="bg-gradient-to-tr from-green-400 to-green-500 inline-block px-2 text-white rounded-xl">Active</span>
+                                        </td>
+                                        <td class="p-3">
+                                            <div class="flex flex-row items-center">
+
+                                                <a href="./edit-user.html"
+                                                    class="p-2 rounded-md bg-green-500 inline-block hover:opacity-80">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="w-4 h-4 text-slate-600">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
+                                                    </svg>
+                                                </a>
+                                                <a id="deleteUser" href="#"
+                                                    class="p-2 rounded-md bg-red-500 inline-block hover:opacity-80 ml-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="w-4 h-4 text-slate-600">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-100 dark:hover:bg-slate-800">
+                                        <td class="p-3">4</td>
+                                        <td class="p-3 flex flex-row items-center">
+                                            <img src="./img/avatar.jpg" alt="avatar" class="rounded-full w-10 h-10">
+                                            <div class="ml-3">
+                                                <p>Tan Huynh</p>
+                                                <p class="text-slate-400">tanhuynh@gmail.com</p>
+                                            </div>
+                                        </td>
+                                        <td class="p-3">1/8/2023</td>
+                                        <td class="p-3">Admin</td>
+                                        <td class="p-3">
+                                            <span
+                                                class="bg-gradient-to-tr from-red-400 to-red-500 inline-block px-2 text-white rounded-xl">Blocked</span>
+                                        </td>
+                                        <td class="p-3">
+                                            <div class="flex flex-row items-center">
+
+                                                <a href="./edit-user.html"
+                                                    class="p-2 rounded-md bg-green-500 inline-block hover:opacity-80">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="w-4 h-4 text-slate-600">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
+                                                    </svg>
+                                                </a>
+                                                <a id="deleteUser" href="#"
+                                                    class="p-2 rounded-md bg-red-500 inline-block hover:opacity-80 ml-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="w-4 h-4 text-slate-600">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-100 dark:hover:bg-slate-800">
+                                        <td class="p-3">5</td>
+                                        <td class="p-3 flex flex-row items-center">
+                                            <img src="./img/avatar.jpg" alt="avatar" class="rounded-full w-10 h-10">
+                                            <div class="ml-3">
+                                                <p>Tan Huynh</p>
+                                                <p class="text-slate-400">tanhuynh@gmail.com</p>
+                                            </div>
+                                        </td>
+                                        <td class="p-3">1/8/2023</td>
+                                        <td class="p-3">Admin</td>
+                                        <td class="p-3">
+                                            <span
+                                                class="bg-gradient-to-tr from-green-400 to-green-500 inline-block px-2 text-white rounded-xl">Active</span>
+                                        </td>
+                                        <td class="p-3">
+                                            <div class="flex flex-row items-center">
+
+                                                <a href="./edit-user.html"
+                                                    class="p-2 rounded-md bg-green-500 inline-block hover:opacity-80">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="w-4 h-4 text-slate-600">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
+                                                    </svg>
+                                                </a>
+                                                <a id="deleteUser" href="#"
+                                                    class="p-2 rounded-md bg-red-500 inline-block hover:opacity-80 ml-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="w-4 h-4 text-slate-600">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-100 dark:hover:bg-slate-800">
+                                        <td class="p-3">6</td>
+                                        <td class="p-3 flex flex-row items-center">
+                                            <img src="./img/avatar.jpg" alt="avatar" class="rounded-full w-10 h-10">
+                                            <div class="ml-3">
+                                                <p>Tan Huynh</p>
+                                                <p class="text-slate-400">tanhuynh@gmail.com</p>
+                                            </div>
+                                        </td>
+                                        <td class="p-3">1/8/2023</td>
+                                        <td class="p-3">Admin</td>
+                                        <td class="p-3">
+                                            <span
+                                                class="bg-gradient-to-tr from-red-400 to-red-500 inline-block px-2 text-white rounded-xl">Blocked</span>
+                                        </td>
+                                        <td class="p-3">
+                                            <div class="flex flex-row items-center">
+
+                                                <a href="./edit-user.html"
+                                                    class="p-2 rounded-md bg-green-500 inline-block hover:opacity-80">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="w-4 h-4 text-slate-600">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
+                                                    </svg>
+                                                </a>
+                                                <a id="deleteUser" href="#"
+                                                    class="p-2 rounded-md bg-red-500 inline-block hover:opacity-80 ml-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="w-4 h-4 text-slate-600">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-100 dark:hover:bg-slate-800">
+                                        <td class="p-3">7</td>
+                                        <td class="p-3 flex flex-row items-center">
+                                            <img src="./img/avatar.jpg" alt="avatar" class="rounded-full w-10 h-10">
+                                            <div class="ml-3">
+                                                <p>Tan Huynh</p>
+                                                <p class="text-slate-400">tanhuynh@gmail.com</p>
+                                            </div>
+                                        </td>
+                                        <td class="p-3">1/8/2023</td>
+                                        <td class="p-3">Admin</td>
+                                        <td class="p-3">
+                                            <span
+                                                class="bg-gradient-to-tr from-green-400 to-green-500 inline-block px-2 text-white rounded-xl">Active</span>
+                                        </td>
+                                        <td class="p-3">
+                                            <div class="flex flex-row items-center">
+
+                                                <a href="./edit-user.html"
+                                                    class="p-2 rounded-md bg-green-500 inline-block hover:opacity-80">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="w-4 h-4 text-slate-600">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
+                                                    </svg>
+                                                </a>
+                                                <a id="deleteUser" href="#"
+                                                    class="p-2 rounded-md bg-red-500 inline-block hover:opacity-80 ml-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="w-4 h-4 text-slate-600">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-100 dark:hover:bg-slate-800">
+                                        <td class="p-3">8</td>
+                                        <td class="p-3 flex flex-row items-center">
+                                            <img src="./img/avatar.jpg" alt="avatar" class="rounded-full w-10 h-10">
+                                            <div class="ml-3">
+                                                <p>Tan Huynh</p>
+                                                <p class="text-slate-400">tanhuynh@gmail.com</p>
+                                            </div>
+                                        </td>
+                                        <td class="p-3">1/8/2023</td>
+                                        <td class="p-3">Admin</td>
+                                        <td class="p-3">
+                                            <span
+                                                class="bg-gradient-to-tr from-red-400 to-red-500 inline-block px-2 text-white rounded-xl">Blocked</span>
+                                        </td>
+                                        <td class="p-3">
+                                            <div class="flex flex-row items-center">
+
+                                                <a href="./edit-user.html"
+                                                    class="p-2 rounded-md bg-green-500 inline-block hover:opacity-80">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="w-4 h-4 text-slate-600">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
+                                                    </svg>
+                                                </a>
+                                                <a id="deleteUser" href="#"
+                                                    class="p-2 rounded-md bg-red-500 inline-block hover:opacity-80 ml-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="w-4 h-4 text-slate-600">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-100 dark:hover:bg-slate-800">
+                                        <td class="p-3">9</td>
+                                        <td class="p-3 flex flex-row items-center">
+                                            <img src="./img/avatar.jpg" alt="avatar" class="rounded-full w-10 h-10">
+                                            <div class="ml-3">
+                                                <p>Tan Huynh</p>
+                                                <p class="text-slate-400">tanhuynh@gmail.com</p>
+                                            </div>
+                                        </td>
+                                        <td class="p-3">1/8/2023</td>
+                                        <td class="p-3">Admin</td>
+                                        <td class="p-3">
+                                            <span
+                                                class="bg-gradient-to-tr from-green-400 to-green-500 inline-block px-2 text-white rounded-xl">Active</span>
+                                        </td>
+                                        <td class="p-3">
+                                            <div class="flex flex-row items-center">
+
+                                                <a href="./edit-user.html"
+                                                    class="p-2 rounded-md bg-green-500 inline-block hover:opacity-80">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="w-4 h-4 text-slate-600">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
+                                                    </svg>
+                                                </a>
+                                                <a id="deleteUser" href="#"
+                                                    class="p-2 rounded-md bg-red-500 inline-block hover:opacity-80 ml-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="w-4 h-4 text-slate-600">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-100 dark:hover:bg-slate-800">
+                                        <td class="p-3">10</td>
+                                        <td class="p-3 flex flex-row items-center">
+                                            <img src="./img/avatar.jpg" alt="avatar" class="rounded-full w-10 h-10">
+                                            <div class="ml-3">
+                                                <p>Tan Huynh</p>
+                                                <p class="text-slate-400">tanhuynh@gmail.com</p>
+                                            </div>
+                                        </td>
+                                        <td class="p-3">1/8/2023</td>
+                                        <td class="p-3">Admin</td>
+                                        <td class="p-3">
+                                            <span
+                                                class="bg-gradient-to-tr from-red-400 to-red-500 inline-block px-2 text-white rounded-xl">Blocked</span>
+                                        </td>
+                                        <td class="p-3">
+                                            <div class="flex flex-row items-center">
+
+                                                <a href="./edit-user.html"
+                                                    class="p-2 rounded-md bg-green-500 inline-block hover:opacity-80">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="w-4 h-4 text-slate-600">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
+                                                    </svg>
+                                                </a>
+                                                <a id="deleteUser" href="#"
+                                                    class="p-2 rounded-md bg-red-500 inline-block hover:opacity-80 ml-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="w-4 h-4 text-slate-600">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="px-3 flex flex-col xl:flex-row justify-between xl:items-center">
+                            <div class=" mt-4">
+                                Rows per page
+                                <select name="entries" id="entries" class="border border-solid border-gray-300 dark:border-gray-600 dark:bg-slate-800">
+                                    <option value="10" selected>10</option>
+                                    <option value="20">20</option>
+                                    <option value="50">50</option>
+                                </select>
+                                <b>1-10</b>
+                                of
+                                <b>120</b>
+                            </div>
+                            <div class="flex flex-row mt-4">
+                                <a class="w-[94px] px-4 py-2 text-center cursor-pointer hover:bg-gray-100 rounded-l-xl border border-solid border-gray-300 dark:border-gray-600 dark:bg-slate-800 inline-block dark:hover:bg-slate-600">Previous</a>
+                                <a class="w-[94px] px-4 py-2 text-center cursor-pointer hover:bg-gray-100 rounded-r-xl border border-solid border-gray-300 dark:border-gray-600 dark:bg-slate-800 inline-block dark:hover:bg-slate-600">Next</a>
                             </div>
                         </div>
                     </div>
