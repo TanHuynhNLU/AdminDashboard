@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Products</title>
+    <title>Update Product</title>
     <script src="./js/theme.js" defer></script>
     <script src="./js/main.js" defer></script>
 
@@ -531,330 +531,237 @@
         <!--Begin Content-->
         <div class="px-4 dark:text-gray-400">
             <div class="px-3">
-                <h2 class="text-3xl font-bold">Products</h2>
+                <h2 class="text-3xl font-bold">Update Product</h2>
                 <ul>
                     <li class="inline-block"><a href="./index.html">Home</a></li>
                     <li class="inline-block pl-2"><a
-                            class="text-slate-400 dark:text-gray-500 before:content-['/'] before:pr-2"
-                            href="#">Products</a></li>
+                            class="text-slate-400 dark:text-gray-500 before:content-['/'] before:pr-2" href="#">Update
+                            Product</a></li>
                 </ul>
             </div>
             <div class="px-3 my-6">
                 <div class="bg-white rounded-xl shadow-sm border border-solid dark:border-gray-600 dark:bg-slate-900">
                     <div class="p-3">
-                        <div class="px-3 pt-3 flex flex-row justify-between">
-                            <div>
-                                <h3 class="text-2xl mb-2 font-bold">Products</h3>
-                                <p class="text-gray-400">All Products: 123456</p>
-                            </div>
-                            <div>
-                                <a href="./add-product.html"
-                                    class="px-2 py-1 text-blue-700 border border-solid border-blue-700 hover:bg-blue-700 hover:text-white rounded-md flex flex-row items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor" class="w-4 h-4 inline-block">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
-                                    </svg>
-                                    <span class="ml-1 inline-block">Add product</span>
-                                </a>
-                            </div>
+                        <div class="px-3 pt-3">
+                            <h3 class="text-2xl mb-2 font-bold">Update Product</h3>
                         </div>
-                        <div class="flex flex-col xl:flex-row px-3 mt-4 justify-between xl:items-center">
-                            <div
-                                class="flex flex-row p-2 w-[350px] border border-solid border-gray-300 dark:border-gray-600 rounded-md items-center bg-gray-100 dark:bg-slate-800 focus-within:border-blue-700">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                                </svg>
-                                <input type="text" placeholder="Search"
-                                    class="w-full h-full ml-2 bg-gray-100 dark:bg-slate-800 outline-none">
+                        <form class="max-w-[800px] mt-4">
+                            <div class="flex flex-col lg:flex-row">
+                                <div class="w-full lg:w-1/2 px-3 my-2">
+                                    <label for="name" class="block mb-2">Product Name</label>
+                                    <input id="name" name="name" type="text" placeholder="Enter Product Name" required
+                                        value="The Alchemist"
+                                        class="p-2 w-full border border-solid border-gray-300 dark:border-gray-600 rounded-md bg-gray-100 dark:bg-slate-800 outline-none focus:border-blue-700">
+                                </div>
+                                <div class="w-full lg:w-1/2 px-3 my-2">
+                                    <label for="genre" class="block mb-2">Genre</label>
+                                    <select name="gendre" id="gender"
+                                        class="p-2 w-full border border-solid border-gray-300 dark:border-gray-600 rounded-md bg-gray-100 dark:bg-slate-800 outline-none focus:border-blue-700">
+                                        <option value=""></option>
+                                        <option value="fiction">Fiction</option>
+                                        <option value="classics">Classics</option>
+                                        <option value="fantasy">Fantasy</option>
+                                        <option value="novels" selected>Novels</option>
+                                        <option value="selfhelp">Self Help</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="flex flex-row mt-4 xl:mt-0">
-                                <label for="filter" class="inline-block">Sort by: </label>
-                                <select name="filter" id="filter"
-                                    class="border border-solid border-gray-300 dark:border-gray-600 dark:bg-slate-800">
-                                    <option selected class="p-1">None</option>
-                                    <option value="name">Name</option>
-                                    <option value="stock">Stock</option>
-                                    <option value="sales">Price</option>
-                                    <option value="dateRegistered">Last updated</option>
-                                </select>
-                                <select name="orderBy" id="orderBy"
-                                    class="border border-solid border-gray-300 dark:border-gray-600 dark:bg-slate-800">
-                                    <option selected class="p-1">A-Z</option>
-                                    <option value="name">Z-A</option>
-                                </select>
+                            <div class="flex flex-col lg:flex-row">
+                                <div class="w-full lg:w-1/2 px-3 my-2">
+                                    <label for="stock" class="block mb-2">Stock</label>
+                                    <input id="stock" name="stock" type="number" placeholder="Enter Stock"
+                                        value="123456"
+                                        class="p-2 w-full border border-solid border-gray-300 dark:border-gray-600 rounded-md bg-gray-100 dark:bg-slate-800 outline-none focus:border-blue-700">
+                                </div>
+                                <div class="w-full lg:w-1/2 px-3 my-2">
+                                    <label for="price" class="block mb-2">Price (vnd)</label>
+                                    <input id="price" name="price" type="number" placeholder="Enter Price"
+                                        value="110000"
+                                        class="p-2 w-full border border-solid border-gray-300 dark:border-gray-600 rounded-md bg-gray-100 dark:bg-slate-800 outline-none focus:border-blue-700">
+                                </div>
                             </div>
-                        </div>
-                        <div class="overflow-x-auto px-3">
-                            <table
-                                class="table-fixed w-full text-left mt-4 border border-solid border-gray-300 dark:border-gray-600">
-                                <thead>
-                                    <tr class="bg-gray-100 dark:bg-slate-800">
-                                        <th class="p-3 w-8">ID</th>
-                                        <th class="p-3 w-[250px]">Product</th>
-                                        <th class="p-3 w-[120px]">Genre</th>
-                                        <th class="p-3 w-[100px]">Stock</th>
-                                        <th class="p-3 w-[150px]">Price</th>
-                                        <th class="p-3 w-[120px]">Sales</th>
-                                        <th class="p-3 w-[150px]">Last update</th>
-                                        <th class="p-3 w-[150px]">Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="hover:bg-gray-100 dark:hover:bg-slate-800">
-                                        <td class="p-3">1</td>
-                                        <td class="p-3 flex flex-row items-center">
-                                            <img src="./img/the-alchemist.jpg" alt="product"
-                                                class="w-12 h-16 object-cover">
-                                            <div class="ml-3">
-                                                <p>The Alchemist</p>
-                                                <p class="text-slate-400">Paulo Coelho</p>
-                                            </div>
-                                        </td>
-                                        <td class="p-3">Novels </td>
-                                        <td class="p-3">123456</td>
-                                        <td class="p-3">
-                                            110.000 vnd
-                                        </td>
-                                        <td class="p-3">
-                                            110k
-                                        </td>
-                                        <td class="p-3">
-                                            Just now
-                                        </td>
-                                        <td class="p-3">
-                                            <div class="flex flex-row items-center">
-                                                <a href="./update-product.html"
-                                                    class="p-2 rounded-md bg-green-500 inline-block hover:opacity-80">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                        class="w-4 h-4 text-slate-600">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                            d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
-                                                    </svg>
-                                                </a>
-                                                <a id="deleteUser" href="#"
-                                                    class="p-2 rounded-md bg-red-500 inline-block hover:opacity-80 ml-2">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                        class="w-4 h-4 text-slate-600">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                            d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="hover:bg-gray-100 dark:hover:bg-slate-800">
-                                        <td class="p-3">1</td>
-                                        <td class="p-3 flex flex-row items-center">
-                                            <img src="./img/the-alchemist.jpg" alt="product"
-                                                class="w-12 h-16 object-cover">
-                                            <div class="ml-3">
-                                                <p>The Alchemist</p>
-                                                <p class="text-slate-400">Paulo Coelho</p>
-                                            </div>
-                                        </td>
-                                        <td class="p-3">Novels </td>
-                                        <td class="p-3">123456</td>
-                                        <td class="p-3">
-                                            110.000 vnd
-                                        </td>
-                                        <td class="p-3">
-                                            110k
-                                        </td>
-                                        <td class="p-3">
-                                            2 weeks ago
-                                        </td>
-                                        <td class="p-3">
-                                            <div class="flex flex-row items-center">
-                                                <a href="./update-product.html"
-                                                    class="p-2 rounded-md bg-green-500 inline-block hover:opacity-80">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                        class="w-4 h-4 text-slate-600">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                            d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
-                                                    </svg>
-                                                </a>
-                                                <a id="deleteUser" href="#"
-                                                    class="p-2 rounded-md bg-red-500 inline-block hover:opacity-80 ml-2">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                        class="w-4 h-4 text-slate-600">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                            d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="hover:bg-gray-100 dark:hover:bg-slate-800">
-                                        <td class="p-3">1</td>
-                                        <td class="p-3 flex flex-row items-center">
-                                            <img src="./img/the-alchemist.jpg" alt="product"
-                                                class="w-12 h-16 object-cover">
-                                            <div class="ml-3">
-                                                <p>The Alchemist</p>
-                                                <p class="text-slate-400">Paulo Coelho</p>
-                                            </div>
-                                        </td>
-                                        <td class="p-3">Novels </td>
-                                        <td class="p-3">123456</td>
-                                        <td class="p-3">
-                                            110.000 vnd
-                                        </td>
-                                        <td class="p-3">
-                                            110k
-                                        </td>
-                                        <td class="p-3">
-                                            This week
-                                        </td>
-                                        <td class="p-3">
-                                            <div class="flex flex-row items-center">
-                                                <a href="./update-product.html"
-                                                    class="p-2 rounded-md bg-green-500 inline-block hover:opacity-80">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                        class="w-4 h-4 text-slate-600">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                            d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
-                                                    </svg>
-                                                </a>
-                                                <a id="deleteUser" href="#"
-                                                    class="p-2 rounded-md bg-red-500 inline-block hover:opacity-80 ml-2">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                        class="w-4 h-4 text-slate-600">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                            d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="hover:bg-gray-100 dark:hover:bg-slate-800">
-                                        <td class="p-3">1</td>
-                                        <td class="p-3 flex flex-row items-center">
-                                            <img src="./img/the-alchemist.jpg" alt="product"
-                                                class="w-12 h-16 object-cover">
-                                            <div class="ml-3">
-                                                <p>The Alchemist</p>
-                                                <p class="text-slate-400">Paulo Coelho</p>
-                                            </div>
-                                        </td>
-                                        <td class="p-3">Novels </td>
-                                        <td class="p-3">123456</td>
-                                        <td class="p-3">
-                                            110.000 vnd
-                                        </td>
-                                        <td class="p-3">
-                                            110k
-                                        </td>
-                                        <td class="p-3">
-                                            Just now
-                                        </td>
-                                        <td class="p-3">
-                                            <div class="flex flex-row items-center">
-                                                <a href="./update-product.html"
-                                                    class="p-2 rounded-md bg-green-500 inline-block hover:opacity-80">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                        class="w-4 h-4 text-slate-600">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                            d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
-                                                    </svg>
-                                                </a>
-                                                <a id="deleteUser" href="#"
-                                                    class="p-2 rounded-md bg-red-500 inline-block hover:opacity-80 ml-2">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                        class="w-4 h-4 text-slate-600">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                            d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="hover:bg-gray-100 dark:hover:bg-slate-800">
-                                        <td class="p-3">1</td>
-                                        <td class="p-3 flex flex-row items-center">
-                                            <img src="./img/the-alchemist.jpg" alt="product"
-                                                class="w-12 h-16 object-cover">
-                                            <div class="ml-3">
-                                                <p>The Alchemist</p>
-                                                <p class="text-slate-400">Paulo Coelho</p>
-                                            </div>
-                                        </td>
-                                        <td class="p-3">Novels </td>
-                                        <td class="p-3">123456</td>
-                                        <td class="p-3">
-                                            110.000 vnd
-                                        </td>
-                                        <td class="p-3">
-                                            110k
-                                        </td>
-                                        <td class="p-3">
-                                            2 months ago
-                                        </td>
-                                        <td class="p-3">
-                                            <div class="flex flex-row items-center">
-                                                <a href="./update-product.html"
-                                                    class="p-2 rounded-md bg-green-500 inline-block hover:opacity-80">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                        class="w-4 h-4 text-slate-600">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                            d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
-                                                    </svg>
-                                                </a>
-                                                <a id="deleteUser" href="#"
-                                                    class="p-2 rounded-md bg-red-500 inline-block hover:opacity-80 ml-2">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                        class="w-4 h-4 text-slate-600">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                            d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="px-3 flex flex-col xl:flex-row justify-between xl:items-center">
-                            <div class=" mt-4">
-                                Rows per page
-                                <select name="entries" id="entries"
-                                    class="border border-solid border-gray-300 dark:border-gray-600 dark:bg-slate-800">
-                                    <option value="5" selected>5</option>
-                                    <option value="10">10</option>
-                                    <option value="20">20</option>
-                                    <option value="50">50</option>
-                                </select>
-                                <b>1-10</b>
-                                of
-                                <b>120</b>
+                            <div class="flex flex-col lg:flex-row">
+                                <div class="w-full lg:w-1/2 px-3 my-2">
+                                    <label for="author" class="block mb-2">Author</label>
+                                    <input id="author" name="author" type="text" placeholder="Enter Author"
+                                        value="Paulo Coelho"
+                                        class="p-2 w-full border border-solid border-gray-300 dark:border-gray-600 rounded-md bg-gray-100 dark:bg-slate-800 outline-none focus:border-blue-700">
+                                </div>
+                                <div class="w-full lg:w-1/2 px-3 my-2">
+                                    <label for="publisher" class="block mb-2">Publisher's Name</label>
+                                    <input id="publisher" name="publisher" type="text" placeholder="Enter Author"
+                                        value="Kim Dong"
+                                        class="p-2 w-full border border-solid border-gray-300 dark:border-gray-600 rounded-md bg-gray-100 dark:bg-slate-800 outline-none focus:border-blue-700">
+                                </div>
                             </div>
-                            <div class="flex flex-row mt-4">
-                                <a
-                                    class="w-[94px] px-4 py-2 text-center cursor-pointer hover:bg-gray-100 rounded-l-xl border border-solid border-gray-300 dark:border-gray-600 dark:bg-slate-800 inline-block dark:hover:bg-slate-600">Previous</a>
-                                <a
-                                    class="w-[94px] px-4 py-2 text-center cursor-pointer hover:bg-gray-100 rounded-r-xl border border-solid border-gray-300 dark:border-gray-600 dark:bg-slate-800 inline-block dark:hover:bg-slate-600">Next</a>
+                            <div class="flex flex-col lg:flex-row">
+                                <div class="w-full lg:w-1/2 px-3 my-2">
+                                    <label for="pages" class="block mb-2">Number Of Page</label>
+                                    <input id="pages" name="pages" type="number" placeholder="Enter Number Of Page"
+                                        value="227"
+                                        class="p-2 w-full border border-solid border-gray-300 dark:border-gray-600 rounded-md bg-gray-100 dark:bg-slate-800 outline-none focus:border-blue-700">
+                                </div>
+                                <div class="w-full lg:w-1/2 px-3 my-2">
+                                    <label for="published" class="block mb-2">Published</label>
+                                    <input id="published" name="published" type="number" placeholder="Enter Published"
+                                        value="2020"
+                                        class="p-2 w-full border border-solid border-gray-300 dark:border-gray-600 rounded-md bg-gray-100 dark:bg-slate-800 outline-none focus:border-blue-700">
+                                </div>
                             </div>
-                        </div>
+                            <div class="px-3 my-2">
+                                <label for="description" class="block mb-2">Description</label>
+                                <textarea id="description" name="description" type="text" rows="5"
+                                    placeholder="Enter Description"
+                                    class="p-2 w-full border border-solid border-gray-300 dark:border-gray-600 rounded-md bg-gray-100 dark:bg-slate-800 outline-none focus:border-blue-700">Combining magic, mysticism, wisdom, and wonder into an inspiring tale of self-discovery, The Alchemist has become a modern classic, selling millions of copies around the world and transforming the lives of countless readers across generations.
+                                </textarea>
+                            </div>
+                            <div class="px-3 my-2">
+                                <label for="description" class="block mb-2">Product Images</label>
+                                <div class="flex flex-row">
+                                    <div id="previewImage1" class="relative px-2 w-1/4">
+                                        <img src="./img/the-alchemist.jpg" alt="image1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" onclick="removePreview(1)"
+                                            class="inline-block absolute top-0 right-2 w-8 h-8 bg-slate-200 text-red-500 cursor-pointer hover:text-red-400">
+                                            <path fill-rule="evenodd"
+                                                d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <div id="previewImage2" class="relative px-2 w-1/4">
+                                        <img src="./img/the-alchemist.jpg" alt="image1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" onclick="removePreview(2)"
+                                            class="inline-block absolute top-0 right-2 w-8 h-8 bg-slate-200 text-red-500 cursor-pointer hover:text-red-400">
+                                            <path fill-rule="evenodd"
+                                                d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <div id="previewImage3" class="relative px-2 w-1/4">
+                                        <img src="./img/the-alchemist.jpg" alt="image1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" onclick="removePreview(3)"
+                                            class="inline-block absolute top-0 right-2 w-8 h-8 bg-slate-200 text-red-500 cursor-pointer hover:text-red-400">
+                                            <path fill-rule="evenodd"
+                                                d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <div id="previewImage4" class="relative px-2 w-1/4">
+                                        <img src="./img/the-alchemist.jpg" alt="image1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" onclick="removePreview(4)"
+                                            class="inline-block absolute top-0 right-2 w-8 h-8 bg-slate-200 text-red-500 cursor-pointer hover:text-red-400">
+                                            <path fill-rule="evenodd"
+                                                d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-3 my-2">
+                                <label id="dropArea" for="images"
+                                    class="flex flex-row flex-wrap content-start h-[200px] border border-dashed stroke-[4px] border-gray-300 dark:border-gray-600 rounded-md bg-gray-100 hover:bg-gray-200 dark:bg-slate-800 dark:hover:bg-slate-700 outline-none cursor-pointer">
+                                    <div id="dropAreaInfo"
+                                        class="h-full w-full flex justify-center items-center flex-col">
+                                        <p class="text-center block"><b>Click to upload</b> or drag and drop</p>
+                                        <p class="text-center block">SVG, PNG, JPG or GIF</p>
+                                    </div>
+                                    <!-- <div class="inline-flex h-6 flex-row bg-slate-300 items-center m-2 px-1">
+                                        <span class="inline-block w-[70px] truncate">hellllo</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="inline-block w-4 h-4">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+                                        </svg>
+                                    </div> -->
+                                </label>
+                                <input id="images" type="file" class="hidden" multiple accept="image/*">
+                            </div>
+                            <div class="flex flex-col sm:flex-row-reverse p-[1px]">
+                                <div class="px-3 my-2 w-full sm:w-1/2 lg:w-[150px]">
+                                    <button
+                                        class="px-4 py-2 text-white bg-blue-700 rounded-md w-full  hover:bg-blue-500">Save</button>
+                                </div>
+                                <div class="px-3 my-2 w-full sm:w-1/2 lg:w-[150px]">
+                                    <button
+                                        class="px-4 py-2 border border-blue-700 text-blue-700 rounded-md w-full hover:bg-blue-500 hover:text-white">Cancel</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
         <!--End Content-->
     </div>
-    <!-- Chart js -->
-    <script src="./js/charts.js"></script>
+    <script>
+        let indexImage = 0;
+        const dropArea = document.querySelector("#dropArea");
+        const dropAreaInfo = document.querySelector("#dropAreaInfo");
+        const imageInput = document.querySelector("#images");
+        let file;
+        dropArea.ondragover = (e) => {
+            e.preventDefault();
+        }
+
+        dropArea.ondrop = (ev) => {
+            ev.preventDefault();
+            let validExtensions = ["image/jpeg", "image/jpg", "image/png"]
+            if (ev.dataTransfer.items) {
+                [...ev.dataTransfer.items].forEach((item, i) => {
+                    if (validExtensions.includes(item.type)) {
+                        if (!dropAreaInfo.classList.contains('hidden')) dropAreaInfo.classList.add('hidden')
+                        const file = item.getAsFile();
+                        showFile(file)
+                    }
+                });
+            } else {
+                console.log("Drag and drop a file!")
+            }
+        }
+
+        imageInput.onchange = (ev) => {
+            let validExtensions = ["image/jpeg", "image/jpg", "image/png"]
+            if (imageInput.files) {
+                for (const file of imageInput.files) {
+                    if (validExtensions.includes(file.type)) {
+                        if (!dropAreaInfo.classList.contains('hidden')) dropAreaInfo.classList.add('hidden')
+                        showFile(file)
+                    }
+                }
+            } else {
+                console.log("Drag and drop a file!")
+            }
+        }
+        function showFile(file) {
+            const imageElement = document.createElement('div')
+            const imageHtml = `
+                                    <div id="image${indexImage++}" class="inline-flex h-6 flex-row bg-slate-300 items-center m-2 px-1">
+                                        <span class="inline-block w-[70px] truncate">${file.name}</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="inline-block w-4 h-4 btn-close">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+                                        </svg>
+                                    </div>
+                        `;
+            imageElement.innerHTML = imageHtml;
+            imageElement.onclick = (e) => {
+                e.preventDefault();
+                if (e.target.closest(".btn-close")) {
+                    dropArea.removeChild(imageElement)
+                    if (dropArea.childElementCount == 1) {
+                        dropAreaInfo.classList.remove('hidden')
+                    }
+                }
+            }
+            dropArea.appendChild(imageElement)
+        }
+
+        // Preview image
+        function removePreview(id){
+            const previewImage = document.getElementById(`previewImage${id}`)
+            previewImage.parentNode.removeChild(previewImage)
+        }
+    </script>
 </body>
 
 </html>
