@@ -566,6 +566,10 @@ html{
   right: 0px;
 }
 
+.right-2 {
+  right: 0.5rem;
+}
+
 .right-3 {
   right: 0.75rem;
 }
@@ -588,14 +592,6 @@ html{
 
 .top-full {
   top: 100%;
-}
-
-.left-2 {
-  left: 0.5rem;
-}
-
-.right-2 {
-  right: 0.5rem;
 }
 
 .z-10 {
@@ -772,14 +768,6 @@ html{
 
 .min-h-screen {
   min-height: 100vh;
-}
-
-.min-h-\[200px\] {
-  min-height: 200px;
-}
-
-.min-h-\[270px\] {
-  min-height: 270px;
 }
 
 .w-1\/2 {
@@ -1167,16 +1155,6 @@ html{
   background-color: rgb(250 204 21 / var(--tw-bg-opacity));
 }
 
-.bg-slate-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
-}
-
-.bg-slate-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
-}
-
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -1261,6 +1239,10 @@ html{
 
 .to-yellow-700 {
   --tw-gradient-to: #a16207 var(--tw-gradient-to-position);
+}
+
+.to-yellow-500 {
+  --tw-gradient-to: #eab308 var(--tw-gradient-to-position);
 }
 
 .bg-cover {
@@ -1439,6 +1421,11 @@ html{
   color: rgb(248 113 113 / var(--tw-text-opacity));
 }
 
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
 .text-red-600 {
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity));
@@ -1472,11 +1459,6 @@ html{
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-red-500 {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .opacity-60 {
@@ -1588,14 +1570,14 @@ html{
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
 }
 
-.hover\:text-white:hover {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .hover\:text-red-400:hover {
   --tw-text-opacity: 1;
   color: rgb(248 113 113 / var(--tw-text-opacity));
+}
+
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .hover\:opacity-100:hover {
@@ -1604,10 +1586,6 @@ html{
 
 .hover\:opacity-80:hover {
   opacity: 0.8;
-}
-
-.hover\:opacity-75:hover {
-  opacity: 0.75;
 }
 
 .focus\:border-blue-700:focus {
