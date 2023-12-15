@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Add New Product</title>
+    <title>Update Order</title>
     <script src="./js/theme.js" defer></script>
     <script src="./js/main.js" defer></script>
 
@@ -531,184 +531,198 @@
         <!--Begin Content-->
         <div class="px-4 dark:text-gray-400">
             <div class="px-3">
-                <h2 class="text-3xl font-bold">Add New Product</h2>
+                <h2 class="text-3xl font-bold">Update Order</h2>
                 <ul>
                     <li class="inline-block"><a href="./index.html">Home</a></li>
                     <li class="inline-block pl-2"><a
-                            class="text-slate-400 dark:text-gray-500 before:content-['/'] before:pr-2" href="#">Add New
-                            Product</a></li>
+                            class="text-slate-400 dark:text-gray-500 before:content-['/'] before:pr-2" href="#">Update
+                            Order</a></li>
                 </ul>
             </div>
             <div class="px-3 my-6">
                 <div class="bg-white rounded-xl shadow-sm border border-solid dark:border-gray-600 dark:bg-slate-900">
                     <div class="p-3">
-                        <div class="px-3 pt-3">
-                            <h3 class="text-2xl mb-2 font-bold">Add New Product</h3>
+                        <!-- Start base infomation -->
+                        <div class="flex flex-col lg:flex-row">
+                            <div class="px-3 pt-3 w-full lg:w-6/12">
+                                <h3 class="text-2xl mb-2 font-bold">Order ID: 1</h3>
+                                <p>01-08-2023 9:02 PM 05-08-2023 10:30 AM</p>
+                            </div>
+                            <div class="px-3 pt-3 w-full lg:w-6/12 flex flex-row items-center lg:justify-end">
+                                <span class="font-bold inline-block mr-4">Status: </span>
+                                <select name="gendre" id="genre"
+                                    class="p-2 w-[140px] border border-solid border-gray-300 dark:border-gray-600 rounded-md bg-gray-100 dark:bg-slate-800 outline-none focus:border-blue-700">
+                                    <option value="pending">Pending</option>
+                                    <option value="cancel">Cancel</option>
+                                    <option value="completed" selected>Completed</option>
+                                </select>
+                            </div>
                         </div>
-                        <form class="max-w-[800px] mt-4">
-                            <div class="flex flex-col lg:flex-row">
-                                <div class="w-full lg:w-1/2 px-3 my-2">
-                                    <label for="name" class="block mb-2">Product Name</label>
-                                    <input id="name" name="name" type="text" placeholder="Enter Product Name" required
-                                        class="p-2 w-full border border-solid border-gray-300 dark:border-gray-600 rounded-md bg-gray-100 dark:bg-slate-800 outline-none focus:border-blue-700">
+                        <!-- End base infomation -->
+                        <!-- Start Order Details -->
+                        <div class="flex flex-col-reverse xl:flex-row">
+                            <div class="px-3 pt-3 lg:w-8/12 mt-4">
+                                <h3 class="text-2xl mb-2 font-bold">Order Details</h3>
+                                <div class="overflow-x-auto">
+                                    <table
+                                    class="table-fixed w-full text-left mt-4 border-spacing-0 border border-solid border-gray-300 dark:border-gray-600 border-separate rounded-md overflow-hidden">
+                                    <thead>
+                                        <tr class="bg-gray-100 dark:bg-slate-800">
+                                            <th class="p-3 w-8">ID</th>
+                                            <th class="p-3 w-[200px]">Product</th>
+                                            <th class="p-3 w-[80px]">Quantity</th>
+                                            <th class="p-3 w-[100px]">Price</th>
+                                            <th class="p-3 w-[100px]">Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="hover:bg-gray-100 dark:hover:bg-slate-800">
+                                            <td class="p-3">1</td>
+                                            <td class="p-3 flex flex-row items-center">
+                                                <img src="./img/the-alchemist.jpg" alt="product"
+                                                    class="w-12 h-16 object-cover">
+                                                <div class="ml-3">
+                                                    <p>The Alchemist</p>
+                                                    <p class="text-slate-400">Paulo Coelho</p>
+                                                </div>
+                                            </td>
+                                            <td class="p-3">1</td>
+                                            <td class="p-3">
+                                                110.000 vnd
+                                            </td>
+                                            <td class="p-3">
+                                                110.000 vnd
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-100 dark:hover:bg-slate-800">
+                                            <td class="p-3">2</td>
+                                            <td class="p-3 flex flex-row items-center">
+                                                <img src="./img/the-alchemist.jpg" alt="product"
+                                                    class="w-12 h-16 object-cover">
+                                                <div class="ml-3">
+                                                    <p>The Alchemist</p>
+                                                    <p class="text-slate-400">Paulo Coelho</p>
+                                                </div>
+                                            </td>
+                                            <td class="p-3">2</td>
+                                            <td class="p-3">
+                                                110.000 vnd
+                                            </td>
+                                            <td class="p-3">
+                                                220.000 vnd
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-100 dark:hover:bg-slate-800">
+                                            <td class="p-3">3</td>
+                                            <td class="p-3 flex flex-row items-center">
+                                                <img src="./img/the-alchemist.jpg" alt="product"
+                                                    class="w-12 h-16 object-cover">
+                                                <div class="ml-3">
+                                                    <p>The Alchemist</p>
+                                                    <p class="text-slate-400">Paulo Coelho</p>
+                                                </div>
+                                            </td>
+                                            <td class="p-3">3</td>
+                                            <td class="p-3">
+                                                110.000 vnd
+                                            </td>
+                                            <td class="p-3">
+                                                330.000 vnd
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                                 </div>
-                                <div class="w-full lg:w-1/2 px-3 my-2">
-                                    <label for="genre" class="block mb-2">Genre</label>
-                                    <select name="genre" id="genre"
-                                        class="p-2 w-full border border-solid border-gray-300 dark:border-gray-600 rounded-md bg-gray-100 dark:bg-slate-800 outline-none focus:border-blue-700">
-                                        <option value=""></option>
-                                        <option value="fiction">Fiction</option>
-                                        <option value="classics">Classics</option>
-                                        <option value="fantasy">Fantasy</option>
-                                        <option value="novels">Novels</option>
-                                        <option value="selfhelp">Self Help</option>
-                                    </select>
-                                </div>
+                                
                             </div>
-                            <div class="flex flex-col lg:flex-row">
-                                <div class="w-full lg:w-1/2 px-3 my-2">
-                                    <label for="stock" class="block mb-2">Stock</label>
-                                    <input id="stock" name="stock" type="number" placeholder="Enter Stock"
-                                        class="p-2 w-full border border-solid border-gray-300 dark:border-gray-600 rounded-md bg-gray-100 dark:bg-slate-800 outline-none focus:border-blue-700">
-                                </div>
-                                <div class="w-full lg:w-1/2 px-3 my-2">
-                                    <label for="price" class="block mb-2">Price (vnd)</label>
-                                    <input id="price" name="price" type="number" placeholder="Enter Price"
-                                        class="p-2 w-full border border-solid border-gray-300 dark:border-gray-600 rounded-md bg-gray-100 dark:bg-slate-800 outline-none focus:border-blue-700">
-                                </div>
-                            </div>
-                            <div class="flex flex-col lg:flex-row">
-                                <div class="w-full lg:w-1/2 px-3 my-2">
-                                    <label for="author" class="block mb-2">Author</label>
-                                    <input id="author" name="author" type="text" placeholder="Enter Author"
-                                        class="p-2 w-full border border-solid border-gray-300 dark:border-gray-600 rounded-md bg-gray-100 dark:bg-slate-800 outline-none focus:border-blue-700">
-                                </div>
-                                <div class="w-full lg:w-1/2 px-3 my-2">
-                                    <label for="publisher" class="block mb-2">Publisher's Name</label>
-                                    <input id="publisher" name="publisher" type="text" placeholder="Enter Author"
-                                        class="p-2 w-full border border-solid border-gray-300 dark:border-gray-600 rounded-md bg-gray-100 dark:bg-slate-800 outline-none focus:border-blue-700">
-                                </div>
-                            </div>
-                            <div class="flex flex-col lg:flex-row">
-                                <div class="w-full lg:w-1/2 px-3 my-2">
-                                    <label for="pages" class="block mb-2">Number Of Page</label>
-                                    <input id="pages" name="pages" type="number" placeholder="Enter Number Of Page"
-                                        class="p-2 w-full border border-solid border-gray-300 dark:border-gray-600 rounded-md bg-gray-100 dark:bg-slate-800 outline-none focus:border-blue-700">
-                                </div>
-                                <div class="w-full lg:w-1/2 px-3 my-2">
-                                    <label for="published" class="block mb-2">Published</label>
-                                    <input id="published" name="published" type="number" placeholder="Enter Published"
-                                        class="p-2 w-full border border-solid border-gray-300 dark:border-gray-600 rounded-md bg-gray-100 dark:bg-slate-800 outline-none focus:border-blue-700">
-                                </div>
-                            </div>
-                            <div class="px-3 my-2">
-                                <label for="description" class="block mb-2">Description</label>
-                                <textarea id="description" name="description" type="text" rows="5"
-                                    placeholder="Enter Description"
-                                    class="p-2 w-full border border-solid border-gray-300 dark:border-gray-600 rounded-md bg-gray-100 dark:bg-slate-800 outline-none focus:border-blue-700"></textarea>
-                            </div>
-                            <div class="px-3 my-2">
-                                <label class="block mb-2">Product Images</label>
-                                <label id="dropArea" for="images"
-                                    class="flex flex-row flex-wrap content-start h-[200px] border border-dashed stroke-[4px] border-gray-300 dark:border-gray-600 rounded-md bg-gray-100 hover:bg-gray-200 dark:bg-slate-800 dark:hover:bg-slate-700 outline-none cursor-pointer">
-                                    <div id="dropAreaInfo"
-                                        class="h-full w-full flex justify-center items-center flex-col">
-                                        <p class="text-center block"><b>Click to upload</b> or drag and drop</p>
-                                        <p class="text-center block">SVG, PNG, JPG or GIF</p>
+                            <div class="px-3 pt-3 lg:w-8/12 xl:w-4/12 mt-4">
+                                <h3 class="text-2xl mb-2 font-bold">Customer Information</h3>
+                                <div class="border border-solid border-gray-300 dark:border-gray-600 p-2 mt-4 rounded-md">
+                                    <div class="mb-2">
+                                        <p class="text-gray-400">Name</p>
+                                        <p class="font-bold">Tan Huynh</p>
                                     </div>
-                                    <!-- <div class="inline-flex h-6 flex-row bg-slate-300 items-center m-2 px-1">
-                                        <span class="inline-block w-[70px] truncate">hellllo</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor" class="inline-block w-4 h-4">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
-                                        </svg>
-                                    </div> -->
-                                </label>
-                                <input id="images" type="file" class="hidden" multiple accept="image/*">
-                            </div>
-                            <div class="flex flex-col sm:flex-row-reverse p-[1px]">
-                                <div class="px-3 my-2 w-full sm:w-1/2 lg:w-[150px]">
-                                    <button
-                                        class="px-4 py-2 text-white bg-blue-700 rounded-md w-full  hover:bg-blue-500">Save</button>
-                                </div>
-                                <div class="px-3 my-2 w-full sm:w-1/2 lg:w-[150px]">
-                                    <button
-                                        class="px-4 py-2 border border-blue-700 text-blue-700 rounded-md w-full hover:bg-blue-500 hover:text-white">Cancel</button>
+                                    <div class="mb-2">
+                                        <p class="text-gray-400">Email</p>
+                                        <p class="font-bold">tanhuynh@gmail.com</p>
+                                    </div>
+                                    <div class="mb-2">
+                                        <p class="text-gray-400">Shipping address</p>
+                                        <p class="font-bold">Thu Duc, Ho Chi Minh city, VietNam</p>
+                                    </div>
+                                    <div class="mb-2">
+                                        <p class="text-gray-400">Billing address</p>
+                                        <p class="font-bold">Same as shipping address</p>
+                                    </div>
+                                    <div class="mb-2">
+                                        <p class="text-gray-400">Payment</p>
+                                        <p class="font-bold">Cash on Delivery</p>
+                                    </div>
                                 </div>
                             </div>
-                        </form>
+                        </div>
+                        <!-- End Order Details -->
+                        <!-- Start Paid by Customer -->
+                        <div class="px-3 pt-3 lg:w-8/12 mt-4">
+                            <h3 class="text-2xl mb-2 font-bold">Paid by Customer</h3>
+                            <div class="border border-solid border-gray-300 dark:border-gray-600 p-2 rounded-md">
+                                <div class="flex flex-row">
+                                    <span class="block w-2/12 text-gray-400">Subtotal</span>
+                                    <span class="block w-6/12 text-gray-400">6 items</span>
+                                    <span class="block w-4/12 text-gray-400 text-right">660.000 vnd</span>
+                                </div>
+                                <div class="flex flex-row mt-2 border-b border-solid border-gray-300 dark:border-gray-600 pb-2">
+                                    <span class="block w-2/12 text-gray-400">Shipping</span>
+                                    <span class="block w-6/12 text-gray-400"></span>
+                                    <span class="block w-4/12 text-gray-400 text-right">30.000 vnd</span>
+                                </div>
+                                <div class="flex flex-row mt-2">
+                                    <span class="block w-6/12 font-bold">Total paid by customer</span>
+                                    <span class="block w-6/12 text-right font-bold">690.000 vnd</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Paid by Customer -->
+                        <!-- Start Timeline -->
+                        <div class="px-3 pt-3 lg:w-8/12 mt-4 mb-3">
+                            <h3 class="text-2xl mb-2 font-bold">Timeline</h3>
+                            <div class="border border-solid border-gray-300 dark:border-gray-600 p-2 rounded-md">
+                             <ol class="border-l-4 border-solid border-gray-300 dark:border-gray-600">
+                                <li class="mb-6 ml-4 relative">
+                                    <div class="absolute -left-[24px] top-0 w-3 h-3 bg-blue-700 rounded-full mt-2"></div>
+                                    <textarea id="newEvent" name="newEvent" type="text" rows="3"
+                                    placeholder="Enter New Event"
+                                    class="p-2 w-full border border-solid border-gray-300 dark:border-gray-600 rounded-md bg-gray-100 dark:bg-slate-800 outline-none focus:border-blue-700"></textarea>
+                                    <div class="flex flex-row-reverse">
+                                        <button class="ml-auto px-4 py-2 bg-blue-700 hover:bg-blue-500 text-white rounded-md">Submit</button>
+                                    </div>
+                                   
+                                </li>
+                                <li class="mb-6 ml-4 relative">
+                                    <div class="absolute -left-[24px] top-0 w-3 h-3 bg-blue-700 rounded-full mt-2"></div>
+                                    <p class="text-gray-400">01-08-2023 9:02PM</p>
+                                    <p class="font-bold">Tan Huynh place this order on Online store</p>
+                                </li>
+                                <li class="mb-6 ml-4 relative">
+                                    <div class="absolute -left-[24px] top-0 w-3 h-3 bg-blue-700 rounded-full mt-2"></div>
+                                    <p class="text-gray-400">01-08-2023 9:02PM</p>
+                                    <p class="font-bold">Tan Huynh place this order on Online store</p>
+                                </li>
+                                <li class="ml-4 relative">
+                                    <div class="absolute -left-[24px] top-0 w-3 h-3 bg-blue-700 rounded-full mt-2"></div>
+                                    <p class="text-gray-400">01-08-2023 9:02PM</p>
+                                    <p class="font-bold">Tan Huynh place this order on Online store</p>
+                                </li>
+                             </ol>
+                            </div>
+                        </div>
+                        <!-- End Timeline -->
                     </div>
                 </div>
             </div>
+            <!--End Content-->
         </div>
-        <!--End Content-->
-    </div>
-    <script>
-        let indexImage = 0;
-        const dropArea = document.querySelector("#dropArea");
-        const dropAreaInfo = document.querySelector("#dropAreaInfo");
-        const imageInput = document.querySelector("#images");
-        let file;
-        dropArea.ondragover = (e) => {
-            e.preventDefault();
-        }
 
-        dropArea.ondrop = (ev) => {
-            ev.preventDefault();
-            let validExtensions = ["image/jpeg", "image/jpg", "image/png"]
-            if (ev.dataTransfer.items) {
-                [...ev.dataTransfer.items].forEach((item, i) => {
-                    if (validExtensions.includes(item.type)) {
-                        if (!dropAreaInfo.classList.contains('hidden')) dropAreaInfo.classList.add('hidden')
-                        const file = item.getAsFile();
-                        showFile(file)
-                    }
-                });
-            } else {
-                console.log("Drag and drop a file!")
-            }
-        }
-
-        imageInput.onchange = (ev) => {
-            let validExtensions = ["image/jpeg", "image/jpg", "image/png"]
-            if (imageInput.files) {
-                for (const file of imageInput.files) {
-                    if (validExtensions.includes(file.type)) {
-                        if (!dropAreaInfo.classList.contains('hidden')) dropAreaInfo.classList.add('hidden')
-                        showFile(file)
-                    }
-                }
-            } else {
-                console.log("Drag and drop a file!")
-            }
-        }
-        function showFile(file) {
-            const imageElement = document.createElement('div')
-            const imageHtml = `
-                                    <div id="image${indexImage++}" class="inline-flex h-6 flex-row bg-slate-300 items-center m-2 px-1">
-                                        <span class="inline-block w-[70px] truncate">${file.name}</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor" class="inline-block w-4 h-4 btn-close">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
-                                        </svg>
-                                    </div>
-                        `;
-            imageElement.innerHTML = imageHtml;
-            imageElement.onclick = (e) => {
-                e.preventDefault();
-                if (e.target.closest(".btn-close")) {
-                    dropArea.removeChild(imageElement)
-                    if (dropArea.childElementCount == 1) {
-                        dropAreaInfo.classList.remove('hidden')
-                    }
-                }
-            }
-            dropArea.appendChild(imageElement)
-        }
-
-    </script>
 </body>
 
 </html>
